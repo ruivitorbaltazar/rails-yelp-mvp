@@ -1,0 +1,12 @@
+<ul class="list-inline mb-2">
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant_path(restaurant) do %>
+        <h3><%= restaurant.name %></h3>
+      <% end %>
+      <p><strong>Address:</strong> <%= restaurant.address %></p>
+      <p><strong>Phone Number:</strong> <%= restaurant.phone_number %></p>
+      <p><strong>Category:</strong> <%= restaurant.category.capitalize %></p>
+    </li>
+  <% end %>
+</ul>
